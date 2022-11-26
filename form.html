@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <!-- font awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/formstyle.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <!-- header-->
+    <div class="header">
+                <h1>
+                    Diva
+                    <div>Store</div>
+                </h1>
+
+                <ol class="links">
+                    <li>
+                        <a href="./home.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="./about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="./form.html">Contact Us</a>
+                    </li>
+                    <div class="symbols">
+                        <li>
+                            <a href="#" id="cart-btn">
+                                <i class="fa fa-search" aria-hidden="true">
+                                </i>
+                            </a>
+                        </li><li>
+                            <a href="#" id="cart-btn">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" id="cart-btn">
+                                <i class="fas fa-shopping-cart">
+                                    <div class="total-count">0</div>
+                                </i>
+                            </a>
+                        </li>
+                    </div>
+                </ol>
+
+            </div>
+    <div class="contact">
+      <div class="contactImg">
+        <img src="./images/contactus.webp" width="650px" height="650px">
+      </div>
+      <!-- form-->
+    <form>
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" value="" placeholder="Enter your Name" />
+      <span class="namespan">Name is reguired</span>
+      <br />
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" value="" placeholder="Enter your Email"/>
+      <span class="emailspan">Email is not valid</span>
+      <br />
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" value="" placeholder="Enter your Password"/>
+      <span class="passwordspan">Password is not valid</span>
+      <br />
+      <label for="password2">Confirm Password</label>
+      <input type="password" id="password2" name="password2" value="" placeholder="Confirm your Password"/>
+      <span class="password2span">Passwords are not matched</span>
+      <br />
+      <label>Message</label>
+      <textarea placeholder="Enter your Message.."></textarea>
+      <span class="msgspan">Message is not valid</span>
+
+      <span class="productspan">Please select at least two Products</span>
+      <input type="submit" value="Contact Us" id="submit" />
+      <div class="result"></div>
+      <div class="output">Your data saved successfully</div>
+    </form>
+    </div>
+    <!-- footer -->
+    <footer>
+            <div class="footer-banner">
+                <div class="container">
+                </div>
+                <button id="backtotop">
+                    <i class="fa fa-arrow-up" aria-hidden="true"></i>
+                </button>
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>COMPANY</h4>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Our Services</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Affiliate Program</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>GET HELP</h4>
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Shipping</a></li>
+                            <li><a href="#">Order Status</a></li>
+                            <li><a href="#">Payment Options</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>ONLINE SHOP</h4>
+                        <ul>
+                            <li><a href="#clothes">Clothes</a></li>
+                            <li><a href="#furniture">Furniture</a></li>
+                            <li><a href="#shoes">shoes</a></li>
+                            <li><a href="#toys">Toys</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>CONTACTS</h4>
+                        <dl class="contact-list">
+                            <dt>Address:</dt>
+                            <dd>798 South Park Avenue, Jaipur, Raj</dd>
+                        </dl>
+                        <dl class="contact-list">
+                            <dt>email:</dt>
+                            <dd><a href="mailto:diva@gmail.com"target="_blank">support@diva.com</a></dd>
+                        </dl>
+                        <dl class="contact-list">
+                            <dt>phones:</dt>
+                            <dd><a href="https://api.whatsapp.com/send?phone=0201023681329"target="_blank">Whatsapp</a>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="social-icons">
+                        <a title="facebook" href="https://www.facebook.com" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a title="twitter" href="https://www.twitter.com" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a title="instagram" href="https://www.instagram.com" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a title="pinterest" href="https://www.pinterest.com" target="_blank">
+                            <i class="fab fa-pinterest"></i>
+                        </a>
+                        <a title="linkedin" href="https://www.linkedin.com" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="right">
+                        <span>Copyright © 2022, All Right Reserved Developed by <span>Dina Gezaf</span></span>
+                </div>
+            </footer>
+    <script src="./js/form.js"></script>
+  </body>
+</html>

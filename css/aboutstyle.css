@@ -1,0 +1,70 @@
+.about {
+    width: 100%;
+    margin: 50px 50px;
+    height: 500px;
+    display: block;
+}
+
+.diva {
+    float: left;
+    width: 40%;
+}
+
+.logo {
+    float: right;
+    width: 50%;
+}
+
+.logo h1 {
+    border-bottom: 2px solid #CC7351;
+    width: 200px;
+}
+
+.logo p {
+    line-height: 1 rem;
+    word-spacing: 3px;
+    margin-top: 20px;
+    width: 600px;
+}
+
+.mission {
+    width: 100%;
+    height: 400px;
+}
+
+.mission h1, .mission div {
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.mission h1 {
+    color: #CC7351;
+    margin-top: 100px;
+}
+
+.mission .elements {
+    list-style-type: none;
+}
+
+.elements li {
+    padding-left: 40px;
+    margin-top: 40px;
+    margin-left: 50px;
+    text-align: center;
+}
+
+.elements li i {
+    font-size: 50px;
+    color: #CC7351;
+}
+
+li h3 {
+    padding-top: 25px;
+    font-size: 20px;
+}
+
+li .txt{
+    padding-top: 25px;
+    font-size: 15px;
+    color: #CC7351;
+}

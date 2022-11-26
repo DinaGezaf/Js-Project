@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Diva Store</title>
+        <!-- font awesome cdn -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+            integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+            crossorigin="anonymous"/>
+        <link rel="stylesheet" href="./css/style.css"/>
+    </head>
+
+    <body>
+        <div>
+            <!-- header-->
+            <div class="header">
+                <h1>
+                    Diva
+                    <div>Store</div>
+                </h1>
+
+                <ol class="links">
+                    <li>
+                        <a href="./home.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="#filtered">Products</a>
+                    </li>
+                    <li>
+                        <a href="./about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="./form.html">Contact Us</a>
+                    </li>
+                    <div class="symbols">
+                        <li>
+                            <a href="#" id="cart-btn">
+                                <i class="fa fa-search" aria-hidden="true">
+                                </i>
+                            </a>
+                        </li><li>
+                            <a href="#" id="cart-btn">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" id="cart-btn">
+                                <i class="fas fa-shopping-cart">
+                                    <div class="total-count">0</div>
+                                </i>
+                            </a>
+                        </li>
+                    </div>
+                </ol>
+
+            </div>
+            <!--Slider-->
+            <div class="slider">
+                <img class="img" src="./images/clothes/c3.jpg" width="200px"/>
+                <img class="img" src="./images/furniture/f3.jpg" width="200px"/>
+                <img class="img" src="./images/shoes/s9.jpg" width="200px"/>
+            </div>
+            <div class="switchslider">
+                <button class="btn3" onclick="previous()">
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                </button>
+                <button class="btn4" onclick="next()">
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </button>
+            </div>
+            <!-- body -->
+            <div class="info">
+                <div class="himg"><img src="./images/sale.jpg" width="600px"
+                        height="500px"></div>
+                <div class="text">
+                    DIVA FASHION SUBSCRIPTIONS
+
+                    <h2> OUR BEST-SELLING PRODUCTS SUBSCRIPTION</h2>
+                    There's a reason why people enjoy ordering our Roaster's
+                    Choice Single Origin subscription so much. With weekly
+                    rotations of newly released and curated Products, what's not
+                    to love?
+
+                    Plus, the shipping is always FREE!
+                    <button class="sale">SALE 20% </button>
+                </div>
+            </div>
+            <div class="products">
+                <h2 id="filtered">Categories</h2>
+                <div id="btnContainer">
+                    <button class="btn" onclick="filterProducts('all')">All Products</button>
+                    <button class="btn" onclick="filterProducts('clothes')">Clothes</button>
+                    <button class="btn" onclick="filterProducts('furniture')">
+                        Furniture
+                    </button>
+                    <button class="btn" onclick="filterProducts('shoes')">
+                        Shoes
+                    </button>
+                    <button class="btn" onclick="filterProducts('toys')">
+                        Toys
+                    </button>
+                </div>
+                <div class="container">
+                    <div>
+                        <div class="clothes" id="clothes">
+                            <div class="product-item">
+                                <div class="product-img">
+                                    <img src="./images/clothes/c1.jpg"
+                                        width="300px">
+                                    <div class="product-content">
+                                        <button type="button"
+                                            class="add-to-cart-btn">
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </button>
+                                    </div>
+                                    <h3 class="product-name">Skirt</h3>
+                                    <p class="product-price">EGP 500
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="product-img">
+                                    <img src="./images/clothes/c9.jpg"
+                                        width="300px">
+                                    <div class="product-content">
+                                        <button type="button"
+                                            class="add-to-cart-btn">
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </button>
+                                    </div>
+                                    <h3 class="product-name">Bants</h3>
+                                    <p class="product-price">EGP 700
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="product-img">
+                                    <img src="./images/clothes/c4.jpg"
+                                        width="300px" height="400px">
+                                    <div class="product-content">
+                                        <button type="button"
+                                            class="add-to-cart-btn">
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </button>
+                                    </div>
+                                    <h3 class="product-name">Blouse</h3>
+                                    <p class="product-price">EGP 300
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="product-img">
+                                    <img src="./images/clothes/c5.jpg"
+                                        width="300px" height="400px">
+                                    <div class="product-content">
+                                        <button type="button"
+                                            class="add-to-cart-btn">
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </button>
+                                    </div>
+                                    <h3 class="product-name">Blouse</h3>
+                                    <p class="product-price">EGP 300
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="product-img">
+                                    <img src="./images/clothes/c6.jpg"
+                                        width="300px" height="400px">
+                                    <div class="product-content">
+                                        <button type="button"
+                                            class="add-to-cart-btn">
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </button>
+                                    </div>
+                                    <h3 class="product-name">Jacket</h3>
+                                    <p class="product-price">EGP 300
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="product-img">
+                                    <img src="./images/clothes/c10.jpg"
+                                        width="300px" height="400px">
+                                    <div class="product-content">
+                                        <button type="button"
+                                            class="add-to-cart-btn">
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </button>
+                                    </div>
+                                    <h3 class="product-name">Sweet-shirt</h3>
+                                    <p class="product-price">EGP 300
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="product-img">
+                                    <img src="./images/clothes/c8.jpg"
+                                        width="300px" height="400px">
+                                    <div class="product-content">
+                                        <button type="button"
+                                            class="add-to-cart-btn">
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </button>
+                                    </div>
+                                    <h3 class="product-name">Dress</h3>
+                                    <p class="product-price">EGP 300
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="product-img">
+                                    <img src="./images/clothes/c7.jpg"
+                                        width="300px" height="400px">
+                                    <div class="product-content">
+                                        <button type="button"
+                                            class="add-to-cart-btn">
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </button>
+                                    </div>
+                                    <h3 class="product-name">Sweet-shirt</h3>
+                                    <p class="product-price">EGP 300
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="furniture" id="furniture">
+                            <div class="product-item">
+                                <div class="product-img">
+                                    <img src="./images/furniture/f1.jpg"
+                                        width="300px">
+                                    <div class="product-content">
+                                        <button type="button"
+                                            class="add-to-cart-btn">
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </button>
+                                    </div>
+                                    <h3 class="product-name">Living Room</h3>
+                                    <p class="product-price">EGP 5000
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="product-img">
+                                    <img src="./images/furniture/f2.jpg"
+                                        width="300px">
+                                    <div class="product-content">
+                                        <button type="button"
+                                            class="add-to-cart-btn">
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </button>
+                                    </div>
+                                    <h3 class="product-name">Diy Dresser</h3>
+                                    <p class="product-price">EGP 5000
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="product-img">
+                                    <img src="./images/furniture/f3.jpg"
+                                        width="300px">
+                                    <div class="product-content">
+                                        <button type="button"
+                                            class="add-to-cart-btn">
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </button>
+                                    </div>
+                                    <h3 class="product-name">Shelf</h3>
+                                    <p class="product-price">EGP 6000
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="product-img">
+                                    <img src="./images/furniture/f4.jpg"
+                                        width="300px">
+                                    <div class="product-content">
+                                        <button type="button"
+                                            class="add-to-cart-btn">
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </button>
+                                    </div>
+                                    <h3 class="product-name">Chair</h3>
+                                    <p class="product-price">EGP 5000
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="product-img">
+                                    <img src="./images/furniture/f5.jpg"
+                                        width="300px">
+                                    <div class="product-content">
+                                        <button type="button"
+                                            class="add-to-cart-btn">
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </button>
+                                    </div>
+                                    <h3 class="product-name">Living Room</h3>
+                                    <p class="product-price">EGP 5000
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="product-img">
+                                    <img src="./images/furniture/f6.jpg"
+                                        width="300px">
+                                    <div class="product-content">
+                                        <button type="button"
+                                            class="add-to-cart-btn">
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </button>
+                                    </div>
+                                    <h3 class="product-name">Mirror</h3>
+                                    <p class="product-price">EGP 5000
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="product-img">
+                                    <img src="./images/furniture/f7.jpg"
+                                        width="300px">
+                                    <div class="product-content">
+                                        <button type="button"
+                                            class="add-to-cart-btn">
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </button>
+                                    </div>
+                                    <h3 class="product-name">Mirror</h3>
+                                    <p class="product-price">EGP 7000
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="product-img">
+                                    <img src="./images/furniture/f8.jpg"
+                                        width="300px">
+                                    <div class="product-content">
+                                        <button type="button"
+                                            class="add-to-cart-btn">
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </button>
+                                    </div>
+                                    <h3 class="product-name">Living Room</h3>
+                                    <p class="product-price">EGP 3000
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="shoes" id="shoes">
+                            <div class="product-item">
+                                <div class="product-img">
+                                    <img src="./images/shoes/s1.jpg"
+                                        width="300px">
+                                    <div class="product-content">
+                                        <button type="button"
+                                            class="add-to-cart-btn">
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </button>
+                                    </div>
+                                    <h3 class="product-name">Girly Shoes</h3>
+                                    <p class="product-price">EGP 500
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="product-img">
+                                    <img src="./images/shoes/s2.jpg"
+                                        width="300px">
+                                    <div class="product-content">
+                                        <button type="button"
+                                            class="add-to-cart-btn">
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </button>
+                                    </div>
+                                    <h3 class="product-name">Girly Shoes</h3>
+                                    <p class="product-price">EGP 600
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="product-img">
+                                    <img src="./images/shoes/s3.jpg"
+                                        width="300px">
+                                    <div class="product-content">
+                                        <button type="button"
+                                            class="add-to-cart-btn">
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </button>
+                                    </div>
+                                    <h3 class="product-name">Girly Shoes</h3>
+                                    <p class="product-price">EGP 700
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="product-img">
+                                    <img src="./images/shoes/s4.jpg"
+                                        width="300px">
+                                    <div class="product-content">
+                                        <button type="button"
+                                            class="add-to-cart-btn">
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </button>
+                                    </div>
+                                    <h3 class="product-name">Girly Shoes</h3>
+                                    <p class="product-price">EGP 300
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="product-img">
+                                    <img src="./images/shoes/s5.jpg"
+                                        width="300px">
+                                    <div class="product-content">
+                                        <button type="button"
+                                            class="add-to-cart-btn">
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </button>
+                                    </div>
+                                    <h3 class="product-name">Girly Shoes</h3>
+                                    <p class="product-price">EGP 300
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="product-img">
+                                    <img src="./images/shoes/s6.jpg"
+                                        width="300px">
+                                    <div class="product-content">
+                                        <button type="button"
+                                            class="add-to-cart-btn">
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </button>
+                                    </div>
+                                    <h3 class="product-name">Girly Shoes</h3>
+                                    <p class="product-price">EGP 300
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="product-img">
+                                    <img src="./images/shoes/s7.jpg"
+                                        width="300px">
+                                    <div class="product-content">
+                                        <button type="button"
+                                            class="add-to-cart-btn">
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </button>
+                                    </div>
+                                    <h3 class="product-name">Girly Shoes</h3>
+                                    <p class="product-price">EGP 300
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="product-img">
+                                    <img src="./images/shoes/s8.jpg"
+                                        width="300px">
+                                    <div class="product-content">
+                                        <button type="button"
+                                            class="add-to-cart-btn">
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </button>
+                                    </div>
+                                    <h3 class="product-name">Girly Shoes</h3>
+                                    <p class="product-price">EGP 300
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="toys" id="toys">
+                            <div class="product-item">
+                                <div class="product-img">
+                                    <img src="./images/toys/t1.jpg"
+                                        width="300px">
+                                    <div class="product-content">
+                                        <button type="button"
+                                            class="add-to-cart-btn">
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </button>
+                                    </div>
+                                    <h3 class="product-name">Elephant Bike</h3>
+                                    <p class="product-price">EGP 500
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="product-img">
+                                    <img src="./images/toys/t2.jpg"
+                                        width="300px">
+                                    <div class="product-content">
+                                        <button type="button"
+                                            class="add-to-cart-btn">
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </button>
+                                    </div>
+                                    <h3 class="product-name">Baby House</h3>
+                                    <p class="product-price">EGP 600
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="product-img">
+                                    <img src="./images/toys/t3.jpg"
+                                        width="300px">
+                                    <div class="product-content">
+                                        <button type="button"
+                                            class="add-to-cart-btn">
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </button>
+                                    </div>
+                                    <h3 class="product-name">Tanna Doll</h3>
+                                    <p class="product-price">EGP 700
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="product-img">
+                                    <img src="./images/toys/t4.jpg"
+                                        width="300px">
+                                    <div class="product-content">
+                                        <button type="button"
+                                            class="add-to-cart-btn">
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </button>
+                                    </div>
+                                    <h3 class="product-name">Sun Toy</h3>
+                                    <p class="product-price">EGP 300
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="product-img">
+                                    <img src="./images/toys/t9.jpg"
+                                        width="300px">
+                                    <div class="product-content">
+                                        <button type="button"
+                                            class="add-to-cart-btn">
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </button>
+                                    </div>
+                                    <h3 class="product-name">Bunny Bear</h3>
+                                    <p class="product-price">EGP 500
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="product-img">
+                                    <img src="./images/toys/t6.jpg"
+                                        width="300px">
+                                    <div class="product-content">
+                                        <button type="button"
+                                            class="add-to-cart-btn">
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </button>
+                                    </div>
+                                    <h3 class="product-name">Puzzle</h3>
+                                    <p class="product-price">EGP 500
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="product-img">
+                                    <img src="./images/toys/t7.jpg"
+                                        width="300px">
+                                    <div class="product-content">
+                                        <button type="button"
+                                            class="add-to-cart-btn">
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </button>
+                                    </div>
+                                    <h3 class="product-name">Doll</h3>
+                                    <p class="product-price">EGP 500
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="product-img">
+                                    <img src="./images/toys/t8.jpg"
+                                        width="300px">
+                                    <div class="product-content">
+                                        <button type="button"
+                                            class="add-to-cart-btn">
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </button>
+                                    </div>
+                                    <h3 class="product-name">Wooden Bike</h3>
+                                    <p class="product-price">EGP 500
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer -->
+        <footer>
+            <div class="footer-banner">
+                <div class="container">
+                </div>
+                <button id="backtotop">
+                    <i class="fa fa-arrow-up" aria-hidden="true"></i>
+                </button>
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>COMPANY</h4>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Our Services</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Affiliate Program</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>GET HELP</h4>
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Shipping</a></li>
+                            <li><a href="#">Order Status</a></li>
+                            <li><a href="#">Payment Options</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>ONLINE SHOP</h4>
+                        <ul>
+                            <li><a href="#clothes">Clothes</a></li>
+                            <li><a href="#furniture">Furniture</a></li>
+                            <li><a href="#shoes">shoes</a></li>
+                            <li><a href="#toys">Toys</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>CONTACTS</h4>
+                        <dl class="contact-list">
+                            <dt>Address:</dt>
+                            <dd>798 South Park Avenue, Jaipur, Raj</dd>
+                        </dl>
+                        <dl class="contact-list">
+                            <dt>email:</dt>
+                            <dd><a href="mailto:diva@gmail.com"target="_blank">support@diva.com</a></dd>
+                        </dl>
+                        <dl class="contact-list">
+                            <dt>phones:</dt>
+                            <dd><a href="https://api.whatsapp.com/send?phone=0201023681329"target="_blank">Whatsapp</a>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="social-icons">
+                        <a title="facebook" href="https://www.facebook.com" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a title="twitter" href="https://www.twitter.com" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a title="instagram" href="https://www.instagram.com" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a title="pinterest" href="https://www.pinterest.com" target="_blank">
+                            <i class="fab fa-pinterest"></i>
+                        </a>
+                        <a title="linkedin" href="https://www.linkedin.com" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="right">
+                        <span>Copyright © 2022, All Right Reserved Developed by <span>Dina Gezaf</span></span>
+                </div>
+            </footer>
+        </div>
+        <script src="./js/script.js"></script>
+    </body>
+
+</html>
