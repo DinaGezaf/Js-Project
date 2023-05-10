@@ -20,97 +20,89 @@ var regName = /^[A-Za-z]+$/;
 var regEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
 var regPassword =
   /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/;
-var regMsg = /^[A-Za-z0-9.]{2,1000}$/;
+var regMsg = /^[A-Za-z0-9.\s]{2,1000}$/;
 var count = 0;
 
-////Events on Every Input
-Name.onkeyup = function () {
-  ///Name
-  Name.style.borderColor = "#CC7351";
-  if (!regName.test(Name.value) || Name.value == "" || Name.value.length < 3) {
-    spanName.style.display = "block";
+//Validate Function
+
+function validateField(inputField, regex, errorSpan, allowSpaces) {
+  inputField.style.borderColor = "#CC7351";
+  let value = inputField.value;
+  if (!allowSpaces) {
+    value = value.trim();
+  }
+  if (value === "" || !regex.test(value)) {
+    errorSpan.style.display = "block";
     return false;
   } else {
-    spanName.style.display = "none";
+    errorSpan.style.display = "none";
+    return true;
   }
-};
-email.onkeyup = function () {
-  ///Email
-  email.style.borderColor = "#CC7351";
-  if (!regEmail.test(email.value) || email.value == "") {
-    spanEmail.style.display = "block";
-    return false;
-  } else {
-    spanEmail.style.display = "none";
-  }
-};
-password.onkeyup = function () {
-  ///Password
-  password.style.borderColor = "#CC7351";
-  if (!regPassword.test(password.value) || password.value == "") {
-    spanPassword.style.display = "block";
-    return false;
-  } else {
-    spanPassword.style.display = "none";
-  }
-};
-password2.onkeyup = function () {
-  ///Confirm Password
+}
+
+function validateConfirmPassword() {
   password2.style.borderColor = "#CC7351";
-  if (password2 == "" || password2.value !== password.value) {
+  if (password2.value.trim() === "" || password2.value !== password.value) {
     spanPassword2.style.display = "block";
     return false;
   } else {
     spanPassword2.style.display = "none";
+    return true;
   }
-};
-message.onkeyup = function () {
-  ///TextArea
-  message.style.borderColor = "#CC7351";
-  if (!regMsg.test(message.value) || message.value == "") {
-    spanMsg.style.display = "block";
+}
+
+function validateMessageField(inputField, regex, errorSpan) {
+  inputField.style.borderColor = "#CC7351";
+  let value = inputField.value.trim();
+
+  if (value === "" || !regex.test(value)) {
+    errorSpan.style.display = "block";
     return false;
   } else {
-    spanMsg.style.display = "none";
+    errorSpan.style.display = "none";
+    return true;
+  }
+}
+
+///Events on Every Input
+Name.onkeyup = function () {
+  validateField(Name, regName, spanName, true);
+};
+
+email.onkeyup = function () {
+  validateField(email, regEmail, spanEmail, true);
+};
+
+password.onkeyup = function () {
+  validateField(password, regPassword, spanPassword, true);
+};
+
+password2.onkeyup = function () {
+  validateConfirmPassword();
+};
+
+message.onkeyup = function () {
+  validateField(message, regMsg, spanMsg);
+};
+
+form.onsubmit = function (e) {
+  e.preventDefault();
+
+  if (
+    !validateField(Name, regName, spanName, true) ||
+    !validateField(email, regEmail, spanEmail, true) ||
+    !validateField(password, regPassword, spanPassword, true) ||
+    !validateConfirmPassword() ||
+    !validateField(message, regMsg, spanMsg)
+  ) {
+    result.innerHTML = "Form is not valid";
+  } else {
+    result.innerHTML = "Your data saved successfully";
   }
 };
 
-///Submit
-form.onsubmit = function validateForm(e) {
-  e.preventDefault();
-  ///Name
-  if (!regName.test(Name.value) || Name.value == "" || Name.value.length < 3) {
-    spanName.style.display = "block";
-    result.innerHTML = "Form is not valid";
-    ///Email
-    if (!regEmail.test(email.value) || email.value == "") {
-      spanEmail.style.display = "block";
-      ///Password
-      if (!regPassword.test(password.value) || password.value == "") {
-        spanPassword.style.display = "block";
-        ///Confirm Password
-        if (password2.value !== password.value || password2.value == "") {
-          spanPassword2.style.display = "block";
-          ///TextArea
-          if (!regMsg.test(message.value) || message.value == "") {
-            spanMsg.style.display = "block";
-          } else {
-            spanMsg.style.display = "none";
-            result.innerHTML = "Your data saved successfully";
-          }
-        } else {
-          spanPassword2.style.display = "none";
-        }
-      } else {
-        spanPassword.style.display = "none";
-      }
-    } else {
-      spanEmail.style.display = "none";
-    }
-  } else {
-    spanName.style.display = "none";
-  }
-  return true;
+message.onkeyup = function () {
+  validateField(message, regMsg, spanMsg, false);
 };
 
 //backtotop
